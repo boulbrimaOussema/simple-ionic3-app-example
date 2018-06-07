@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar style ="background-color:green">
+        <ion-title>learnApp</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <img style="margin: auto" src="assets/imgs/img_login.png" alt="your image">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-row>
+            <ion-col>
+                <ion-list inset>
+                    <ion-item>
+                        <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="user.username" required></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="signin-col">
+                <button style ="background-color:green" ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

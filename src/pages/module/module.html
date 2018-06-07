@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>LearnApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col col-12  *ngFor="let modul of modules">
+    <ion-card>
+      <ion-card-header>{{modul.date}}</ion-card-header>
+      <ion-content>
+        {{modul.cours1}}
+      </ion-content>
+
+
+    </ion-card>
+
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>
